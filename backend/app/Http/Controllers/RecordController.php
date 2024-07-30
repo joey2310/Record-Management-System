@@ -57,9 +57,6 @@ class RecordController extends Controller
         return response()->json($record, 200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit($id)
     {
         $record = Record::find($id);
@@ -71,9 +68,6 @@ class RecordController extends Controller
         return response()->json($record);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, $id)
     {
         $request->validate([
